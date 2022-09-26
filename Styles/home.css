@@ -85,8 +85,9 @@ main .hero-title {
 
 /* Sectiunea 2 */
 .second-section {
-  background-color: white;
-  padding: 96px 50px;
+  position: relative;
+  width: 100%;
+  padding: 9.6rem 5rem;
 }
 
 .second-section .title {
@@ -189,14 +190,14 @@ scroll-snap-type: mandatory;
 /* Stilizare Sectiuni Individuale */
 main .second-section {
   position: relative;
-  z-index: -1;
+  width: 100%;
+  padding: 9.6rem 5rem;
+  /* background-color: rgba(202, 205, 193, 0.1); */
+  /* z-index: -3; */
   margin-top: -11rem;
 }
 
 main .second-section::before {
-  background-image: url("https://www.itschool.ro/_next/static/media/background.570f46a1.svg");
-  background-repeat: no-repeat;
-  background-position: center top;
   content: "";
   display: block;
   inset: 0px 0px 0px calc(-50vw + min(600px, 50vw - 3rem));
@@ -204,6 +205,16 @@ main .second-section::before {
   position: absolute;
   z-index: -2;
   background-size: auto;
+  background-color: rgba(202, 205, 193, 0.1);
+}
+
+@media (min-width: 960px) {
+  main .second-section::before {
+    background-image: url("https://www.itschool.ro/_next/static/media/background.570f46a1.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: auto 100%;
+  }
 }
 
 main .second-section .call-action {
@@ -212,6 +223,10 @@ main .second-section .call-action {
   justify-content: center;
   margin-left: 3rem;
   padding: var(--spacing-m) 0;
+}
+
+main .sponsor-section {
+  background-color: rgba(202, 205, 193, 0.1);
 }
 
 main .second-section .sponsor-title {
@@ -476,6 +491,86 @@ main .fourth-section .testimonials-students {
 }
 main .fourth-section .testimonials-students p {
   color: white;
+}
+
+main .fifth-section {
+  margin: auto;
+  max-width: 78rem;
+  width: 100%;
+  padding: 4.8rem 0px 9.6rem;
+  display: flex;
+  gap: 2.4rem;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main .fifth-section h2 {
+  font-family: Asap, sans-serif;
+  font-size: 3.6rem;
+  font-weight: normal;
+  line-height: 1.22;
+  color: rgb(25, 30, 48);
+  margin: 0px;
+}
+
+main .fifth-section .spacer {
+  width: 100%;
+  height: 4.8rem;
+}
+
+main .fifth-section .faq-section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 0px 2.4rem;
+  border-radius: 1.6rem;
+  box-shadow: rgb(25 30 48 / 10%) 0px 20px 40px 0px;
+  background-color: rgb(253, 253, 253);
+}
+
+main .fifth-section .faq-text-section {
+  cursor: pointer;
+  z-index: 1;
+  padding: 2.4rem 0px;
+  display: flex;
+  gap: 1rem;
+}
+
+main .fifth-section .faq-text-section > h4 {
+  flex: 1 1 0%;
+}
+
+main .fifth-section .faq-text {
+  font-family: Asap, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1;
+  color: rgb(25, 30, 48);
+  margin: 0px;
+}
+
+main .fifth-section .faq-section > p {
+  font-family: Asap, sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  color: rgb(25, 30, 48);
+}
+
+main .fifth-section .faq-section .faq-answer-text {
+  margin-left: 2.8rem;
+  z-index: 0;
+  transition: all 0.4s ease-out 0s;
+  opacity: 0;
+  max-height: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  border-top: 1px solid rgba(25, 30, 48, 0.4);
 }
 
 main .subscribe {
