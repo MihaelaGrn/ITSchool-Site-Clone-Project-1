@@ -1,97 +1,209 @@
-<<<<<<< HEAD
+.header-courses {
+  z-index: 9999;
+  grid-area: header / header / header / header;
+  position: static;
+  background-color: transparent;
+  transition: all 300ms ease-in-out 0s;
+}
+
 /* Top Section + copiii */
 .top-section {
-    position: relative;
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 9.6rem 0;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9.6rem 0;
+}
+
+.top-section .grid-spacer {
+  height: 2rem;
 }
 
 .bg-about {
-    width: 100vw;
-    background-image: url(https://www.itschool.ro/_next/static/media/background.175e0d96.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
-    position: absolute;
-    top: -7.6rem;
-    bottom: 0;
-    z-index: -1;
+  width: 100vw;
+  background-image: url(https://www.itschool.ro/_next/static/media/background.175e0d96.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  position: absolute;
+  top: -7.6rem;
+  bottom: 0;
+  z-index: -1;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 p {
-    overflow-wrap: break-word;
-    text-align: center;
-    color: white;
+  font-weight: normal;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  /* text-align: center; */
+  color: white;
 }
 
 /* Mid Section + copiii */
 .mid-section {
-    position: relative;
-    margin: 0;
-    width: 100%;
-    padding: 9.6rem 0px;
-    box-sizing: border-box;
-    /* 
+  /* position: relative;
+  margin: 0;
+  width: 100%;
+  padding: 9.6rem 0px;
+  box-sizing: border-box; */
+  display: flex;
+  align-items: flex-end;
+  gap: 2.4rem;
+  flex-wrap: wrap;
+  /* 
     border-radius: 1.6rem;
     background-color: var(--text-color-light);
     margin-top: -80px;
     height: 20rem;
      */
 }
-=======
-/* Top Section + copiii */
-.top-section {
-    position: relative;
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 9.6rem 0;
+
+@media (max-width: 960px) {
+  mid-section {
+    flex-direction: column;
+  }
 }
 
-.bg-about {
-    width: 100vw;
-    background-image: url(https://www.itschool.ro/_next/static/media/background.175e0d96.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
-    position: absolute;
-    top: -7.6rem;
-    bottom: 0;
-    z-index: -1;
+.mid-section .coursesForWho {
+  flex: 1 1 0%;
 }
 
-h1 {
-    text-align: center;
+.mid-section .coursesForWho > p {
+  font-weight: normal;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  color: rgba(25, 30, 48, 0.4);
+  display: block;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-align: left;
 }
 
-p {
-    overflow-wrap: break-word;
-    text-align: center;
-    color: white;
+.mid-section > h2 {
+  display: block;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: 3.6rem;
+  font-weight: normal;
+  line-height: 1.22;
 }
 
-/* Mid Section + copiii */
-.mid-section {
-    position: relative;
-    margin: 0;
-    width: 100%;
-    padding: 9.6rem 0px;
-    box-sizing: border-box;
-    /* 
-    border-radius: 1.6rem;
-    background-color: var(--text-color-light);
-    margin-top: -80px;
-    height: 20rem;
-     */
+.mid-section .details-courses > p {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  text-align: left;
+  color: rgb(25, 30, 48);
 }
->>>>>>> d52c2db9a9c4f82f6bab189123cc452af0516d45
+
+.mid-section .grid-spacer {
+  width: 100%;
+  height: 2.4rem;
+}
+
+.mid-section .coursesForWho-image img {
+  display: block;
+  max-width: 100%;
+  height: 517px;
+  width: 516px;
+}
+
+@media (max-width: 960px) {
+  .mid-section .coursesForWho-image {
+    margin-left: auto;
+    max-width: 100%;
+  }
+}
+
+.bottom-section {
+  position: relative;
+  padding: 9.6rem 0px;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.bottom-section::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: -2rem;
+  bottom: 0px;
+  width: 100vw;
+  background-image: url(https://www.itschool.ro/_next/static/media/background.c097b26b.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bottom-section .courses-help {
+  margin: auto;
+  max-width: 60rem;
+}
+
+.bottom-section .courses-help > p {
+  font-size: 1.2rem;
+  font-weight: normal;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  text-align: center;
+  color: white;
+}
+
+.bottom-section .grid-spacer {
+  width: 100%;
+  height: 1.6rem;
+}
+
+.bottom-section .courses-help > h2 {
+  font-family: Asap, sans-serif;
+  font-size: 3.2rem;
+  font-weight: normal;
+  line-height: 1.22;
+  text-align: center;
+  color: white;
+  margin: 0px;
+}
+
+.bottom-section .courses-help-button {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  gap: 2.4rem;
+}
+
+.bottom-section .courses-help-button > a {
+  display: block;
+  width: fit-content;
+  margin: 0px;
+  background-color: white;
+  color: rgb(0, 135, 104);
+  padding: 1.2rem 2.4rem;
+  border-radius: 24px;
+  font-size: 1.6rem;
+  transition: opacity 0.25s ease-in 0s;
+}
+
+.bottom-section .courses-help-button > a:hover {
+  opacity: 0.8;
+}
+
+main .subscribe div h2 {
+  color: rgb(25, 30, 48);
+}
+
+main .subscribe div p {
+  color: rgb(25, 30, 48);
+}
