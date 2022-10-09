@@ -140,7 +140,7 @@ p {
   position: absolute;
   z-index: -1;
   top: 0px;
-  left: -2rem;
+  /* left: -4rem; */
   bottom: 0px;
   width: 100vw;
   background-image: url(https://www.itschool.ro/_next/static/media/background.c097b26b.svg);
@@ -206,4 +206,19 @@ main .subscribe div h2 {
 
 main .subscribe div p {
   color: rgb(25, 30, 48);
+}
+
+main .subscribe::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 1px;
+  background-color: rgba(25, 30, 48, 0.1);
+}
+
+footer .foot-header > p {
+  color: var(--text-color-dark);
 }

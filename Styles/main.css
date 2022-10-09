@@ -21,6 +21,8 @@
   --font-size-l: 1.75rem;
   --font-size-xl: 2.25rem;
   --font-size-xxl: 3rem;
+
+  --col: calc(min(1200px, 100%) / 12);
 }
 
 /* Reseteaza CSS din browser */
@@ -200,15 +202,43 @@ footer section .col {
   flex: 1 1 0%;
 }
 
+@media (min-width: 960px) and (max-width: 1200px) {
+  footer section .col.style-1 {
+    flex-grow: revert;
+    flex-shrink: revert;
+    flex-basis: calc(var(--col) * 12 - 20px);
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1200px) {
+  footer section .col.style-2 {
+    flex-grow: revert;
+    flex-shrink: revert;
+    flex-basis: calc(var(--col) * 4 - 20px);
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1200px) {
+  footer section .col.style-3 {
+    flex-grow: revert;
+    flex-shrink: revert;
+    flex-basis: calc(var(--col) * 4 - 20px);
+  }
+}
+
+footer section .col.style-1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 footer section .col .first-foot {
   width: 380px;
-  flex-direction: column;
   gap: 2.4rem;
 }
 
 footer section .col .first-foot .foot-header {
   flex: 1 1 0%;
-  display: flex;
   flex-direction: column;
   padding-right: 4.8rem;
 }
@@ -222,8 +252,8 @@ footer section .col .first-foot .footer-social {
   flex: 1 1 0%;
   color: rgb(25, 30, 48);
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
+  flex-direction: column;
   align-content: flex-start;
 }
 
@@ -498,4 +528,29 @@ main .subscribe .sub-container .input-wrapper p {
   border-radius: 2rem;
   background-color: rgb(0, 135, 104);
   color: white;
+}
+
+main .grid-spacer-s {
+  width: 100%;
+  height: 1.6rem;
+}
+
+main .grid-spacer-m {
+  width: 100%;
+  height: 2.4rem;
+}
+
+main .grid-spacer-l {
+  width: 100%;
+  height: 4.8rem;
+}
+
+footer .grid-spacer-l {
+  width: 100%;
+  height: 4.8rem;
+}
+
+footer .grid-spacer-xxl {
+  width: 100%;
+  height: 9.6rem;
 }

@@ -1,3 +1,19 @@
+.header-about {
+  z-index: 9999;
+  grid-area: header / header / header / header;
+  position: static;
+  background-color: transparent;
+  transition: all 300ms ease-in-out 0s;
+}
+
+p {
+  font-weight: normal;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  /* text-align: center; */
+  color: white;
+}
+
 /* Top Section + copiii */
 .top-section {
   position: relative;
@@ -21,54 +37,389 @@
   z-index: -1;
 }
 
-/* Mid Section + copiii */
-.mid-section {
+/* Mid Section one + copiii */
+.mid-section-one {
   position: relative;
   margin: 0;
   width: 100%;
   padding: 9.6rem 0px;
   box-sizing: border-box;
-  /* 
-    border-radius: 1.6rem;
-    background-color: var(--text-color-light);
-    margin-top: -80px;
-    height: 20rem;
-     */
-}
-/* Top Section + copiii */
-.top-section {
-  position: relative;
-  box-sizing: border-box;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 9.6rem 0;
 }
 
-.bg-about {
+.mid-section-one .about-school-wrapper {
+  display: grid;
+  gap: 2.4rem;
+  grid-template-areas:
+    "about-text . about-image"
+    "results-image . about-image"
+    "results-image . results-text";
+}
+
+.mid-section-one .about-school-wrapper .about-text {
+  grid-area: about-text / about-text / about-text / about-text;
+  max-width: 58rem;
+  margin-right: auto;
+}
+
+.mid-section-one .about-school-wrapper .about-text > p.sub-title {
+  font-family: Asap, sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  color: var(--text-color-muted);
+}
+
+.mid-section-one .about-school-wrapper > h2 {
+  font-size: 3.6rem;
+  font-weight: normal;
+  line-height: 1.22;
+  color: var(--text-color-dark);
+  margin: 0px;
+}
+
+.mid-section-one .about-school-wrapper > p {
+  font-family: Asap, sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  color: var(--text-color-dark);
+}
+
+.mid-section-one .about-school-wrapper .about-image {
+  grid-area: about-image / about-image / about-image / about-image;
+  align-self: end;
+  max-width: 48rem;
+  margin-left: auto;
+}
+
+.mid-section-one .about-school-wrapper .about-image img {
+  display: block;
+  max-width: 100%;
+  height: 460px;
+  width: 460px;
+}
+
+.mid-section-one .about-school-wrapper .results-image {
+  grid-area: results-image / results-image / results-image / results-image;
+  max-width: 58rem;
+  margin-right: auto;
+}
+
+.mid-section-one .about-school-wrapper .results-image img {
+  display: block;
+  max-width: 100%;
+  height: 460px;
+  width: 460px;
+}
+
+.mid-section-one .about-school-wrapper .results-text {
+  grid-area: results-text / results-text / results-text / results-text;
+  max-width: 48rem;
+  margin-left: auto;
+}
+
+.mid-section-one .about-school-wrapper .results-text > p.sub-title {
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  color: var(--text-color-muted);
+}
+
+/* Mid Section two + copiii */
+
+.mid-section-two {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  padding: 9.6rem 0px;
+  box-sizing: border-box;
+}
+
+.mid-section-two .about-trainers-text {
+  display: flex;
+  gap: 4.8rem;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.mid-section-two .about-trainers-text .about-trainers-title-wrapper {
+  display: grid;
+  gap: 2.4rem;
+  grid-template-areas: "trainers-intro . trainers-text";
+}
+
+.mid-section-two
+  .about-trainers-text
+  .about-trainers-title-wrapper
+  .grid-spacer {
+  height: 3rem;
+}
+
+.mid-section-two
+  .about-trainers-text
+  .about-trainers-title-wrapper
+  > p.sub-title {
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  color: var(--text-color-muted);
+}
+
+.mid-section-two .about-trainers-text .about-trainers-title-wrapper > h2 {
+  font-size: 3.6rem;
+  font-weight: normal;
+  line-height: 1.22;
+  color: var(--text-color-dark);
+  margin: 0px;
+}
+
+.mid-section-two .about-trainers-photos {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 9.6rem 0px 4.8rem;
+}
+
+@media (min-width: 768px) {
+  .mid-section-two .about-trainers-photos .large {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .mid-section-two .about-trainers-photos .mobile {
+    display: none;
+  }
+}
+
+.mid-section-two .about-trainers-photos .button-trainers {
+  cursor: pointer;
+  width: fit-content;
+  padding: 0px 4.8rem;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 2.4rem;
+  min-width: 11.4rem;
+  transition: all 0.25s ease-in 0s;
+  border: 1px solid rgb(0, 135, 104);
+  color: rgb(0, 135, 104);
+  background-color: white;
+}
+
+.mid-section-two
+  .about-trainers-photos
+  .button-trainers
+  p.button-trainers-text {
+  display: block;
+  margin: 0px;
+  transition: all 0.25s ease-in 0s;
+  padding: 0.8rem 0px;
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: rgb(0, 135, 104);
+}
+
+.mid-section-two .about-trainers-enroll {
+  padding-top: 4.8rem;
+  border-top: 1px solid rgba(25, 30, 48, 0.1);
+}
+
+.mid-section-two .about-trainers-enroll .about-trainers-enroll-wrapper {
+  margin: auto;
+  max-width: 58rem;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mid-section-two .about-trainers-enroll .about-trainers-enroll-wrapper > h2 {
+  font-family: Asap, sans-serif;
+  font-size: 3.6rem;
+  font-weight: normal;
+  line-height: 1.22;
+  text-align: center;
+  color: var(--text-color-dark);
+  margin: 0px;
+}
+
+.mid-section-two .about-trainers-enroll .about-trainers-enroll-wrapper > p {
+  font-family: Asap, sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  text-align: center;
+  color: var(--text-color-dark);
+}
+
+.mid-section-two
+  .about-trainers-enroll
+  .about-trainers-enroll-wrapper
+  .button-enroll {
+  cursor: pointer;
+  width: fit-content;
+  padding: 0px 4.8rem;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 2.4rem;
+  min-width: 11.4rem;
+  color: white;
+  background-color: rgb(0, 135, 104);
+  transition: all 0.25s ease-in 0s;
+}
+
+.mid-section-two
+  .about-trainers-enroll
+  .about-trainers-enroll-wrapper
+  .button-enroll
+  > p.button-enroll-text {
+  display: block;
+  margin: 0px;
+  color: white;
+  transition: all 0.25s ease-in 0s;
+  padding: 0.8rem 0px;
+  font-weight: normal;
+  font-size: 1.6rem;
+}
+
+.mid-section-two .about-trainers-bg {
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: -2rem;
+  bottom: 0px;
   width: 100vw;
-  background-image: url(https://www.itschool.ro/_next/static/media/background.5c87565d.svg);
+  background-image: url(https://www.itschool.ro/_next/static/media/background.f010c851.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
-  position: absolute;
-  top: -7.6rem;
-  bottom: 0;
-  z-index: -1;
 }
 
-/* Mid Section + copiii */
-.mid-section {
+/* Buttom section */
+
+.buttom-section {
   position: relative;
-  margin: 0;
   width: 100%;
   padding: 9.6rem 0px;
-  box-sizing: border-box;
-  /* 
-    border-radius: 1.6rem;
-    background-color: var(--text-color-light);
-    margin-top: -80px;
-    height: 20rem;
-     */
 }
+
+.buttom-section .about-locations {
+  display: grid;
+  gap: 2rem;
+  grid-template-areas:
+    "locations locations locations map map map"
+    "one one two two three three"
+    "four four four four three three";
+}
+
+@media (max-width: 960px) {
+  .buttom-section .about-locations {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "locations map"
+      "one three"
+      "two three"
+      "four four";
+  }
+}
+
+.buttom-section .about-locations .about-locations-title {
+  grid-area: locations / locations / locations / locations;
+  max-width: 58rem;
+}
+
+.buttom-section .about-locations .about-locations-title > p.sub-title {
+  font-family: Asap, sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  color: var(--text-color-muted);
+}
+
+.buttom-section .about-locations .about-locations-title > h2 {
+  font-family: Asap, sans-serif;
+  font-size: 3.6rem;
+  font-weight: normal;
+  line-height: 1.22;
+  color: var(--text-color-dark);
+  margin: 0px;
+}
+
+.buttom-section .about-locations .about-locations-title > p {
+  font-family: Asap, sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  color: var(--text-color-dark);
+}
+
+.buttom-section .about-locations .about-locations-map {
+  grid-area: map / map / map / map;
+  display: flex;
+  margin-bottom: 4.8rem;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.buttom-section .about-locations img {
+  display: block;
+  max-width: 100%;
+}
+
+.buttom-section .about-locations .about-locations-photo {
+  border-radius: 1.6rem;
+  object-fit: cover;
+}
+
+.buttom-section .about-locations .about-locations-photo.photo-1 {
+  grid-area: one / one / one / one;
+}
+
+.buttom-section .about-locations .about-locations-photo.photo-2 {
+  grid-area: two / two / two / two;
+}
+
+.buttom-section .about-locations .about-locations-photo.photo-3 {
+  grid-area: three / three / three / three;
+}
+
+.buttom-section .about-locations .about-locations-photo.photo-4 {
+  grid-area: four / four / four / four;
+}
+
+footer .footer-line {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(25, 30, 48, 0.1);
+}
+
+footer .foot-header > p {
+  color: var(--text-color-dark);
+}
+
+/* main .buttom-section::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 1px;
+  background-color: rgba(25, 30, 48, 0.1);
+} */
