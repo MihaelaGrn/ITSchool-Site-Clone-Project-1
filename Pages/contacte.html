@@ -62,11 +62,280 @@
         </section>
         <section class="mid-section">
           <div class="contacts-form">
-            <div class="form-input"></div>
-            <div class="form-information"></div>
-            <!-- am ramas aici -->
+            <div class="form-input">
+              <div class="input-loading">
+                <div class="spinner-container">
+                  <div class="spinner-ring">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="registration-name boxformat">
+                <div class="surname container">
+                  <label for="lastName" class="form-label">Nume</label>
+                  <div aria-invalid="false" class="input-wrapper">
+                    <input id="lastName" value="" class="input-text" />
+                  </div>
+                </div>
+                <div class="firstname container">
+                  <label for="firstName" class="form-label">Prenume</label>
+                  <div aria-invalid="false" class="input-wrapper">
+                    <input id="firstName" value="" class="input-text" />
+                  </div>
+                </div>
+              </div>
+              <div class="registration-contact-details boxformat">
+                <div class="phone container">
+                  <label for="phone" class="form-label">Telefon</label>
+                  <div aria-invalid="false" class="input-wrapper">
+                    <input id="phone" value="" class="input-text" />
+                  </div>
+                </div>
+                <div class="email container">
+                  <label for="email" class="form-label">E-mail</label>
+                  <div aria-invalid="false" class="input-wrapper">
+                    <input id="email" value="" class="input-text" />
+                  </div>
+                </div>
+              </div>
+              <div class="registration-message boxformat">
+                <div class="message container">
+                  <label for="message" class="form-label">Mesaj</label>
+                  <div aria-invalid="false" class="input-wrapper message">
+                    <textarea
+                      id="message"
+                      placeholder="Salut, IT School!"
+                      class="input-text"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="captcha-wrapper">
+                <div>
+                  <div>
+                    <div style="width: 304px; height: 78px">
+                      <div>
+                        <iframe
+                          title="reCAPTCHA"
+                          src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6LcgEw0fAAAAAB8zgzLmF9qyFafwopLGFn_dG3lU&amp;co=aHR0cHM6Ly93d3cuaXRzY2hvb2wucm86NDQz&amp;hl=en&amp;type=image&amp;v=vP4jQKq0YJFzU6e21-BGy3GP&amp;theme=light&amp;size=normal&amp;badge=bottomright&amp;cb=6s9vl6g8dmyt"
+                          width="304"
+                          height="78"
+                          role="presentation"
+                          name="a-6ias4z413agm"
+                          frameborder="0"
+                          scrolling="no"
+                          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
+                        ></iframe>
+                      </div>
+                      <textarea
+                        id="g-recaptcha-response"
+                        name="g-recaptcha-response"
+                        class="g-recaptcha-response"
+                      ></textarea>
+                    </div>
+                    <iframe style="display: none"></iframe>
+                    <!-- nu am introdus #document in i-frames -->
+                  </div>
+                </div>
+                <div
+                  class="grid-spacer"
+                  style="width: 100%; height: 0.4rem"
+                ></div>
+              </div>
+              <div class="contact-agreement">
+                <div class="checkbox-container" style="width: initial">
+                  <span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M18 3.25H6A2.75 2.75 0 0 0 3.25 6v12A2.75 2.75 0 0 0 6 20.75h12A2.75 2.75 0 0 0 20.75 18V6A2.75 2.75 0 0 0 18 3.25zM6 4.75h12c.69 0 1.25.56 1.25 1.25v12c0 .69-.56 1.25-1.25 1.25H6c-.69 0-1.25-.56-1.25-1.25V6c0-.69.56-1.25 1.25-1.25z"
+                        fill="currentColor"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                  </span>
+                  <label class="checkbox-style"></label>
+                </div>
+                <p>
+                  *Prin completarea acestui formular, ești de acord cu
+                  <a
+                    target="_blank"
+                    href="https://www.itschool.ro/termeni-si-conditii"
+                    class="link-TC"
+                    ><span class="link-typography"
+                      >Termenii și Condițiile</span
+                    ></a
+                  >
+                  IT School
+                </p>
+              </div>
+              <div class="registration-submit">
+                <div class="button-container">
+                  <p>Trimite mesajul</p>
+                </div>
+              </div>
+            </div>
+            <div class="form-info">
+              <h3>Informații generale</h3>
+              <div class="grid-spacer-m"></div>
+              <p>
+                Nu ai găsit ce căutai sau ai nevoie de informații suplimentare?
+                Alege modalitatea de comunicare preferată și contactează-ne. Îți
+                reamintim că
+                <a target="_self" href="https://www.itschool.ro/despre/faq"
+                  ><span class="link-typography">aici</span></a
+                >
+                regăsești o listă cu întrebări frecvente.
+              </p>
+              <div
+                class="grid-spacer"
+                style="width: 100%; height: 3.2rem"
+              ></div>
+              <div class="contact-info">
+                <img
+                  src="https://www.itschool.ro/_next/static/media/icons-phone.c9b06e19.svg"
+                  alt="Phone"
+                />
+                <h5>+40 737 880 420</h5>
+              </div>
+              <div
+                class="grid-spacer"
+                style="width: 100%; height: 3.2rem"
+              ></div>
+              <div class="contact-info">
+                <img
+                  src="https://www.itschool.ro/_next/static/media/mail-icon.d19a74cb.svg"
+                  alt="email"
+                  style="width: 35px"
+                />
+                <h5>office@itschool.ro</h5>
+              </div>
+              <div
+                class="grid-spacer"
+                style="width: 100%; height: 3.2rem"
+              ></div>
+              <div class="contact-info">
+                <div style="align-self: stretch">
+                  <img
+                    src="https://www.itschool.ro/_next/static/media/icons-pin.c54b64b4.svg"
+                    alt="Address"
+                  />
+                </div>
+                <div>
+                  <h5>Blv. General Ion Dragalina, Nr. 27, Timișoara</h5>
+                  <div
+                    class="grid-spacer"
+                    style="width: 100%; height: 0.8rem"
+                  ></div>
+                  <p>Activitatea la sediu este suspendată în acest moment.</p>
+                </div>
+              </div>
+              <div
+                class="grid-spacer"
+                style="width: 100%; height: 3.2rem"
+              ></div>
+              <div class="contact-info">
+                <img
+                  src="	https://www.itschool.ro/_next/static/media/icons-time.152efcdc.svg"
+                  alt="OpenHours"
+                />
+                <h5>Luni - Vineri, de la 10:00 - 18:00</h5>
+              </div>
+            </div>
           </div>
         </section>
+        <section class="buttom-section">
+          <img
+            src="https://www.itschool.ro/_next/static/media/romania.48803c6e.svg"
+            alt="Romania"
+            style="display: block; width: 100%"
+          />
+          <div class="grid-spacer" style="width: 100%; height: 3.6rem"></div>
+          <div class="">
+            <p>LOCAȚIILE NOASTRE</p>
+            <div class="grid-spacer-s"></div>
+            <h2>Acceleratorul de cariere în IT a ajuns și în:</h2>
+          </div>
+          <div class="grid-spacer-m"></div>
+          <div class="location-addresses-icons">
+            <div class="location-icon">
+              <img
+                src="https://www.itschool.ro/_next/static/media/icons-pin-blue.d0420ad4.svg"
+                alt="Pin"
+              />
+              <p>Arad</p>
+            </div>
+            <div class="location-icon">
+              <img
+                src="https://www.itschool.ro/_next/static/media/icons-pin-yellow.44be68f6.svg
+                "
+                alt="Pin"
+              />
+              <p>București</p>
+            </div>
+            <div class="location-icon">
+              <img
+                src="https://www.itschool.ro/_next/static/media/icons-pin-blue.d0420ad4.svg
+                "
+                alt="Pin"
+              />
+              <p>Cluj-Napoca</p>
+            </div>
+            <div class="location-icon">
+              <img
+                src="https://www.itschool.ro/_next/static/media/icons-pin-blue.d0420ad4.svg"
+                alt="Pin"
+              />
+              <p>Brașov</p>
+            </div>
+            <div class="location-icon">
+              <img
+                src="https://www.itschool.ro/_next/static/media/icons-pin-yellow.44be68f6.svg
+                "
+                alt="Pin"
+              />
+              <p>Oradea</p>
+            </div>
+            <div class="location-icon">
+              <img
+                src="https://www.itschool.ro/_next/static/media/icons-pin-yellow.44be68f6.svg
+                "
+                alt="Pin"
+              />
+              <p>Sibiu</p>
+            </div>
+            <div class="location-icon">
+              <img
+                src="https://www.itschool.ro/_next/static/media/icons-pin-yellow.44be68f6.svg
+                "
+                alt="Pin"
+              />
+              <p>Timișoara</p>
+            </div>
+          </div>
+        </section>
+        <!-- am ramas aici -->
+        <div class="scroll-to-top">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+          >
+            <path
+              d="m15.776 5.692-.137.042-.07.03-.1.055-.08.056-.096.085-8 8a1 1 0 0 0 1.302 1.51l.112-.096L15 9.083v16.25a1 1 0 0 0 1.99.136l.01-.136V9.081l6.293 6.293a1 1 0 0 0 1.51-1.302l-.096-.112-8-8-.077-.07-.103-.074-.138-.07-.128-.045-.12-.024-.141-.01-.076.003-.148.022z"
+              fill="currentColor"
+              fill-rule="nonzero"
+            ></path>
+          </svg>
+        </div>
       </main>
 
       <footer>
