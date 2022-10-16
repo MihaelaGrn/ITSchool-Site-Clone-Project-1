@@ -25,12 +25,12 @@
   --col: calc(min(1200px, 100%) / 12);
 }
 
-/* Reseteaza CSS din browser */
 body {
   font-family: "Asap", sans-serif;
   font-size: var(--font-size-default);
   margin: 0;
   overflow-x: hidden;
+  font-size: 1rem;
 }
 
 * {
@@ -53,27 +53,32 @@ a {
 h1 {
   color: var(--text-color-white);
   font-size: var(--font-size-xxl);
+  font-weight: normal;
 }
 
 h2 {
   margin: 0;
   color: var(--text-color-dark);
   font-size: var(--font-size-xl);
+  font-weight: normal;
 }
 
 h3 {
   color: var(--text-color-dark);
   font-size: var(--font-size-l);
+  font-weight: normal;
 }
 
 h4 {
   color: var(--text-color-dark);
   font-size: var(--font-size-m);
+  font-weight: normal;
 }
 
 h5 {
   color: var(--text-color-dark);
   font-size: var(--font-size-m);
+  font-weight: normal;
 }
 
 p {
@@ -83,6 +88,8 @@ p {
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
+  font-weight: light;
+  line-height: 1.5;
 }
 
 :-webkit-any(article, aside, nav, section) h1 {
@@ -184,7 +191,7 @@ section {
 footer {
   grid-area: footer / footer / footer / footer;
   height: fit-content;
-  padding: 4.8rem 20px 2.4rem;
+  padding: 3rem 20px 1.5rem;
   background-color: white;
   width: 100%;
   max-width: min(1240px, 100vw);
@@ -233,14 +240,26 @@ footer section .col.style-1 {
 }
 
 footer section .col .first-foot {
-  width: 380px;
-  gap: 2.4rem;
+  /* width: 380px;
+  gap: 1.5rem; */
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 1200px) {
+  footer section .col .first-foot {
+    width: 380px;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 }
 
 footer section .col .first-foot .foot-header {
+  display: flex;
   flex: 1 1 0%;
   flex-direction: column;
-  padding-right: 4.8rem;
+  padding-right: 3rem;
 }
 
 footer section .col .first-foot .foot-header img {
@@ -265,18 +284,22 @@ footer section .col .first-foot .footer-social p {
   margin-top: 12px;
   margin-bottom: 10px;
   color: var(--text-color-muted);
+  font-size: 0.75rem;
+  text-align: left;
 }
 
 footer section .col .foot-col {
   flex: 1 1 0%;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.25rem;
 }
 
 footer section .col .foot-col p {
   margin: 12px 0;
   color: var(--text-color-muted);
+  font-size: 0.75rem;
+  text-align: left;
 }
 
 footer section .col .foot-col a {
@@ -287,39 +310,39 @@ footer section .col .foot-col a:hover {
   color: var(--bg-primary);
 }
 
-footer section .spacer {
+footer .spacer {
   height: 4.8rem;
 }
 
-footer section .footer-info {
+footer .footer-info {
   width: 100%;
-  padding-top: 2.4rem;
-  padding-bottom: 2.4rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   display: flex;
-  gap: 2.4rem;
+  gap: 1.5rem;
   -webkit-box-pack: justify;
   justify-content: space-between;
 }
 
-footer section .footer-info-text p {
+footer .footer-info-text p {
   display: flex;
-  gap: 2rem;
+  gap: 1.25rem;
   font-family: Asap, sans-serif;
-  font-size: 1.2rem;
+  font-size: 0.75rem;
   font-weight: normal;
   color: rgba(25, 30, 48, 0.4);
 }
 
-footer section .footer-info-text a {
+footer .footer-info-text a {
   display: flex;
-  gap: 2rem;
+  gap: 1.25rem;
   font-family: Asap, sans-serif;
-  font-size: 1.2rem;
+  font-size: 0.75rem;
   font-weight: normal;
   color: rgba(25, 30, 48, 0.4);
 }
 
-footer section .footer-info-text a:hover {
+footer .footer-info-text a:hover {
   color: rgb(3 178 203);
 }
 
@@ -399,6 +422,7 @@ footer section .footer-info-text a:hover {
   text-align: left;
   padding: 0 2.4rem;
   margin-top: 2rem;
+  font-weight: 500;
 }
 
 .card-container .sub-title {
@@ -411,15 +435,17 @@ footer section .footer-info-text a:hover {
   text-align: left;
   margin-top: 2rem;
   padding: 0 2.4rem;
+  font-weight: 500;
 }
 
 .card-container .go-to {
-  padding: 0 2.4rem;
+  padding: 16rem 2.4rem 0 2.4rem;
   margin-top: 3.1rem;
   align-self: flex-end;
   cursor: pointer;
   color: rgb(25, 30, 48);
   transition: color 0.2s ease-in 0s;
+  position: absolute;
 }
 
 .card-container .go-to:hover {
@@ -457,9 +483,9 @@ main .subscribe {
   position: relative;
   margin: 0px;
   width: 100%;
-  padding: 9.6rem 0px;
+  padding: 6rem 0px;
   display: flex;
-  gap: 2.4rem;
+  gap: 1.5rem;
   -webkit-box-pack: center;
   justify-content: center;
   -webkit-box-align: center;
@@ -496,24 +522,28 @@ main .subscribe div p {
 main .subscribe .sub-container {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.25rem;
+  /* gap: 0.4rem; */
 }
 
 main .subscribe .sub-container .input-wrapper {
   position: relative;
   background-color: white;
-  border-radius: 2rem;
+  border-radius: 1.25rem;
+  /* border-radius: 2rem; */
   border: 1px solid rgba(25, 30, 48, 0.4);
   display: flex;
 }
 
 main .subscribe .sub-container .input-wrapper input {
-  width: 30rem;
+  width: 18.75rem;
+  /* width: 30rem; */
   border: 0px;
   outline: 0px;
   background-color: transparent;
   font-size: var(--font-size-default);
-  padding: 0.5rem 6rem 0.5rem 1.5rem;
+  padding: 0.3rem 3.75rem 0.3rem 0.9rem;
+  /* padding: 0.5rem 6rem 0.5rem 1.5rem; */
   color: rgb(25, 30, 48);
 }
 
@@ -524,33 +554,35 @@ main .subscribe .sub-container .input-wrapper p {
   top: -1px;
   right: -1px;
   bottom: -1px;
-  padding: 0.4rem 1.2rem;
-  border-radius: 2rem;
+  padding: 0.25rem 0.75rem;
+  /* padding: 0.4rem 1.2rem; */
+  border-radius: 1.25rem;
+  /* border-radius: 2rem; */
   background-color: rgb(0, 135, 104);
   color: white;
 }
 
 main .grid-spacer-s {
   width: 100%;
-  height: 1.6rem;
+  height: 1rem;
 }
 
 main .grid-spacer-m {
   width: 100%;
-  height: 2.4rem;
+  height: 1.5rem;
 }
 
 main .grid-spacer-l {
   width: 100%;
-  height: 4.8rem;
+  height: 3rem;
 }
 
 footer .grid-spacer-l {
   width: 100%;
-  height: 4.8rem;
+  height: 3rem;
 }
 
 footer .grid-spacer-xxl {
   width: 100%;
-  height: 9.6rem;
+  height: 6rem;
 }

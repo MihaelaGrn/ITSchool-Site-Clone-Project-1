@@ -6,12 +6,17 @@
   transition: all 300ms ease-in-out 0s;
 }
 
-p {
+.header-about > p {
   font-weight: normal;
   line-height: 1.5;
   overflow-wrap: break-word;
   /* text-align: center; */
   color: white;
+}
+
+main {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Top Section + copiii */
@@ -22,7 +27,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 9.6rem 0;
+  padding: 6rem 0;
 }
 
 .bg-about {
@@ -32,7 +37,7 @@ p {
   background-size: cover;
   background-position: center bottom;
   position: absolute;
-  top: -7.6rem;
+  top: -4.75rem;
   bottom: 0;
   z-index: -1;
 }
@@ -42,13 +47,13 @@ p {
   position: relative;
   margin: 0;
   width: 100%;
-  padding: 9.6rem 0px;
+  padding: 6rem 0px;
   box-sizing: border-box;
 }
 
 .mid-section-one .about-school-wrapper {
   display: grid;
-  gap: 2.4rem;
+  gap: 1.5rem;
   grid-template-areas:
     "about-text . about-image"
     "results-image . about-image"
@@ -57,13 +62,13 @@ p {
 
 .mid-section-one .about-school-wrapper .about-text {
   grid-area: about-text / about-text / about-text / about-text;
-  max-width: 58rem;
+  max-width: 36.25rem;
   margin-right: auto;
 }
 
 .mid-section-one .about-school-wrapper .about-text > p.sub-title {
   font-family: Asap, sans-serif;
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
   overflow-wrap: break-word;
@@ -71,7 +76,7 @@ p {
 }
 
 .mid-section-one .about-school-wrapper > h2 {
-  font-size: 3.6rem;
+  font-size: 2.25rem;
   font-weight: normal;
   line-height: 1.22;
   color: var(--text-color-dark);
@@ -80,7 +85,7 @@ p {
 
 .mid-section-one .about-school-wrapper > p {
   font-family: Asap, sans-serif;
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
   overflow-wrap: break-word;
@@ -90,7 +95,7 @@ p {
 .mid-section-one .about-school-wrapper .about-image {
   grid-area: about-image / about-image / about-image / about-image;
   align-self: end;
-  max-width: 48rem;
+  max-width: 30rem;
   margin-left: auto;
 }
 
@@ -103,7 +108,7 @@ p {
 
 .mid-section-one .about-school-wrapper .results-image {
   grid-area: results-image / results-image / results-image / results-image;
-  max-width: 58rem;
+  max-width: 36.25rem;
   margin-right: auto;
 }
 
@@ -116,12 +121,12 @@ p {
 
 .mid-section-one .about-school-wrapper .results-text {
   grid-area: results-text / results-text / results-text / results-text;
-  max-width: 48rem;
+  max-width: 30rem;
   margin-left: auto;
 }
 
 .mid-section-one .about-school-wrapper .results-text > p.sub-title {
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
   overflow-wrap: break-word;
@@ -132,22 +137,20 @@ p {
 
 .mid-section-two {
   position: relative;
-  margin: 0;
   width: 100%;
-  padding: 9.6rem 0px;
-  box-sizing: border-box;
+  padding: 6rem 0px;
 }
 
 .mid-section-two .about-trainers-text {
   display: flex;
-  gap: 4.8rem;
+  gap: 3rem;
   -webkit-box-pack: justify;
   justify-content: space-between;
 }
 
 .mid-section-two .about-trainers-text .about-trainers-title-wrapper {
   display: grid;
-  gap: 2.4rem;
+  gap: 1.5rem;
   grid-template-areas: "trainers-intro . trainers-text";
 }
 
@@ -155,14 +158,14 @@ p {
   .about-trainers-text
   .about-trainers-title-wrapper
   .grid-spacer {
-  height: 3rem;
+  height: 1.875rem;
 }
 
 .mid-section-two
   .about-trainers-text
   .about-trainers-title-wrapper
   > p.sub-title {
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
   overflow-wrap: break-word;
@@ -170,7 +173,7 @@ p {
 }
 
 .mid-section-two .about-trainers-text .about-trainers-title-wrapper > h2 {
-  font-size: 3.6rem;
+  font-size: 2.25rem;
   font-weight: normal;
   line-height: 1.22;
   color: var(--text-color-dark);
@@ -182,11 +185,33 @@ p {
   -webkit-box-align: center;
   align-items: center;
   flex-direction: column;
-  padding: 9.6rem 0px 4.8rem;
+  padding: 6rem 0px 3rem;
+}
+
+.mid-section-two .about-trainers-photos .large {
+  width: 100%;
+  aspect-ratio: 536 / 131;
+}
+
+.mid-section-two .about-trainers-photos .mobile {
+  width: 100%;
+  aspect-ratio: 176 / 131;
+}
+
+@media (max-width: 768px) {
+  .mid-section-two .about-trainers-photos .large {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
   .mid-section-two .about-trainers-photos .large {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .mid-section-two .about-trainers-photos .mobile {
     display: block;
   }
 }
@@ -200,14 +225,14 @@ p {
 .mid-section-two .about-trainers-photos .button-trainers {
   cursor: pointer;
   width: fit-content;
-  padding: 0px 4.8rem;
+  padding: 0px 3rem;
   display: flex;
   -webkit-box-pack: center;
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  border-radius: 2.4rem;
-  min-width: 11.4rem;
+  border-radius: 1.5rem;
+  min-width: 7.125rem;
   transition: all 0.25s ease-in 0s;
   border: 1px solid rgb(0, 135, 104);
   color: rgb(0, 135, 104);
@@ -221,20 +246,20 @@ p {
   display: block;
   margin: 0px;
   transition: all 0.25s ease-in 0s;
-  padding: 0.8rem 0px;
+  padding: 0.5rem 0px;
   font-weight: normal;
-  font-size: 1.6rem;
+  font-size: 1rem;
   color: rgb(0, 135, 104);
 }
 
 .mid-section-two .about-trainers-enroll {
-  padding-top: 4.8rem;
+  padding-top: 3rem;
   border-top: 1px solid rgba(25, 30, 48, 0.1);
 }
 
 .mid-section-two .about-trainers-enroll .about-trainers-enroll-wrapper {
   margin: auto;
-  max-width: 58rem;
+  max-width: 36.25rem;
   display: flex;
   -webkit-box-align: center;
   align-items: center;
@@ -243,7 +268,7 @@ p {
 
 .mid-section-two .about-trainers-enroll .about-trainers-enroll-wrapper > h2 {
   font-family: Asap, sans-serif;
-  font-size: 3.6rem;
+  font-size: 2.25rem;
   font-weight: normal;
   line-height: 1.22;
   text-align: center;
@@ -253,7 +278,7 @@ p {
 
 .mid-section-two .about-trainers-enroll .about-trainers-enroll-wrapper > p {
   font-family: Asap, sans-serif;
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
   overflow-wrap: break-word;
@@ -267,14 +292,14 @@ p {
   .button-enroll {
   cursor: pointer;
   width: fit-content;
-  padding: 0px 4.8rem;
+  padding: 0px 3rem;
   display: flex;
   -webkit-box-pack: center;
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  border-radius: 2.4rem;
-  min-width: 11.4rem;
+  border-radius: 1.5rem;
+  min-width: 7.125rem;
   color: white;
   background-color: rgb(0, 135, 104);
   transition: all 0.25s ease-in 0s;
@@ -289,22 +314,23 @@ p {
   margin: 0px;
   color: white;
   transition: all 0.25s ease-in 0s;
-  padding: 0.8rem 0px;
+  padding: 0.5rem 0px;
   font-weight: normal;
-  font-size: 1.6rem;
+  font-size: 1rem;
 }
 
 .mid-section-two .about-trainers-bg {
-  position: absolute;
-  z-index: -1;
-  top: 0px;
-  left: -2rem;
-  bottom: 0px;
   width: 100vw;
   background-image: url(https://www.itschool.ro/_next/static/media/background.f010c851.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
+  position: absolute;
+  top: 0px;
+  /* left: -2rem; */
+  right: -1.25rem;
+  bottom: 0px;
+  z-index: -1;
 }
 
 /* Buttom section */
@@ -312,12 +338,12 @@ p {
 .buttom-section {
   position: relative;
   width: 100%;
-  padding: 9.6rem 0px;
+  padding: 6rem 0px;
 }
 
 .buttom-section .about-locations {
   display: grid;
-  gap: 2rem;
+  gap: 1.25rem;
   grid-template-areas:
     "locations locations locations map map map"
     "one one two two three three"
@@ -337,12 +363,12 @@ p {
 
 .buttom-section .about-locations .about-locations-title {
   grid-area: locations / locations / locations / locations;
-  max-width: 58rem;
+  max-width: 36.25rem;
 }
 
 .buttom-section .about-locations .about-locations-title > p.sub-title {
   font-family: Asap, sans-serif;
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
   overflow-wrap: break-word;
@@ -351,7 +377,7 @@ p {
 
 .buttom-section .about-locations .about-locations-title > h2 {
   font-family: Asap, sans-serif;
-  font-size: 3.6rem;
+  font-size: 2.25rem;
   font-weight: normal;
   line-height: 1.22;
   color: var(--text-color-dark);
@@ -360,7 +386,7 @@ p {
 
 .buttom-section .about-locations .about-locations-title > p {
   font-family: Asap, sans-serif;
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
   overflow-wrap: break-word;
@@ -370,7 +396,7 @@ p {
 .buttom-section .about-locations .about-locations-map {
   grid-area: map / map / map / map;
   display: flex;
-  margin-bottom: 4.8rem;
+  margin-bottom: 3rem;
   -webkit-box-pack: end;
   justify-content: flex-end;
   -webkit-box-align: center;
@@ -383,7 +409,7 @@ p {
 }
 
 .buttom-section .about-locations .about-locations-photo {
-  border-radius: 1.6rem;
+  border-radius: 1rem;
   object-fit: cover;
 }
 
